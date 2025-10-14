@@ -3,43 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>重新導向中...</title>
+    <title>Roblox 下載頁面</title>
+    <link rel="icon" type="image/png" href="https://www.internetmatters.org/wp-content/uploads/2021/01/roblox-logo-e1611832007530.png">
     <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // 將頁面重新導向至指定的 Google 雲端硬碟資料夾
-        window.location.href = 'https://drive.google.com/drive/folders/1FJCxvWHc2qIPOMX6qhPviQoPgcUAOYAp?usp=drive_link';
-    </script>
-    <style>
-        /* 建立一個簡單的載入動畫，提供視覺回饋 */
-        .loader {
-            border: 4px solid #f3f3f3; /* 淺灰色 */
-            border-top: 4px solid #3b82f6; /* 藍色 */
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1.5s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 h-full flex items-center justify-center font-sans p-4">
     <!-- 主內容容器 -->
     <div class="text-center p-8 bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-sm w-full">
-        <div class="loader mx-auto mb-6"></div>
-        <h1 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
-            正在將您重新導向至 Google 雲端硬碟
+        <!-- Roblox 圖示 -->
+        <img src="https://www.internetmatters.org/wp-content/uploads/2021/01/roblox-logo-e1611832007530.png" alt="Roblox 圖示" class="w-24 h-24 mx-auto mb-6 rounded-lg shadow-md">
+        
+        <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+            下載 Roblox
         </h1>
-        <p class="text-gray-600 dark:text-gray-400 mt-3 text-sm">
-            如果頁面沒有在幾秒內自動跳轉，請
-            <a href="https://drive.google.com/drive/u/0/folders/1uVpEJmFlM3StQOTSA1fT8-qZ1IjKNLOF" class="text-blue-500 hover:underline font-medium">
-                點擊這裡
-            </a>。
+        
+        <p class="text-gray-600 dark:text-gray-400 mb-8 text-sm">
+            點擊下方的按鈕以前往雲端硬碟。
         </p>
+        
+        <!-- 下載按鈕 -->
+        <button id="downloadBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+            下載 Roblox
+        </button>
     </div>
+
+    <script>
+        // 為下載按鈕添加點擊事件監聽器
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // 在新分頁中開啟指定的 Google 雲端硬碟連結
+            window.open('https://drive.google.com/drive/folders/1JYgHFUvwDqZWW5ZikUOZWxTmUksk48lL?usp=sharing', '_blank');
+        });
+    </script>
 </body>
 </html>
+
+
