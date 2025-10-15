@@ -19,7 +19,7 @@
         </h1>
         
         <p class="text-gray-600 dark:text-gray-400 mb-8 text-sm">
-            點擊下方的按鈕以前往雲端硬碟。
+            點擊下方按鈕開始下載流程。
         </p>
         
         <!-- 下載按鈕 -->
@@ -28,11 +28,42 @@
         </button>
     </div>
 
+    <!-- 提示訊息 Modal -->
+    <div id="infoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 text-center max-w-2xl w-full flex flex-col" style="height: 80vh;">
+            <!-- 嵌入的 Google 文件 -->
+            <div class="flex-grow w-full mb-4">
+                <iframe src="https://docs.google.com/document/d/e/2PACX-1vQqE5k5BKACm_j4Isy7Dz5YDsdog9FhzcN3FGnV66giyKeR7KcL5p9iaDXwnZV26M-ZdOthrfT8bJzC/pub?embedded=true" class="w-full h-full border-0"></iframe>
+            </div>
+            <!-- 完成按鈕 -->
+            <button id="completeBtn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg mt-auto">
+                完成
+            </button>
+        </div>
+    </div>
+
     <script>
+        // 獲取 DOM 元素
+        const downloadBtn = document.getElementById('downloadBtn');
+        const infoModal = document.getElementById('infoModal');
+        const completeBtn = document.getElementById('completeBtn');
+
         // 為下載按鈕添加點擊事件監聽器
-        document.getElementById('downloadBtn').addEventListener('click', function() {
-            // 在新分頁中開啟指定的 Google 雲端硬碟連結
+        downloadBtn.addEventListener('click', function() {
+            // 步驟 1: 在新分頁中開啟 Google 雲端硬碟連結
             window.open('https://drive.google.com/drive/folders/1JYgHFUvwDqZWW5ZikUOZWxTmUksk48lL?usp=sharing', '_blank');
+            
+            // 步驟 2: 顯示提示訊息 Modal
+            infoModal.classList.remove('hidden');
+        });
+
+        // 為完成按鈕添加點擊事件監聽器
+        completeBtn.addEventListener('click', function() {
+            // 步驟 3: 在新分頁中開啟 Roblox 官方下載連結
+            window.open('https://www.roblox.com/download/client?os=win', '_blank');
+            
+            // 步驟 4: 隱藏提示訊息 Modal
+            infoModal.classList.add('hidden');
         });
     </script>
 </body>
