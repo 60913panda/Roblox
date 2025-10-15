@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>下載 Roblox </title>
+    <title>Roblox 下載頁面</title>
     <link rel="icon" type="image/png" href="https://corp.roblox.com/icons/android-icon-512x512.png">
     <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,13 +18,18 @@
                 Roblox 下載流程
             </h1>
             <p class="text-gray-600 dark:text-gray-400 text-sm">
-                請先從下方視窗下載主程式，然後點擊「下一步」。
+                請先下載必要的設定檔，然後點擊「下一步」。
             </p>
         </div>
         
-        <!-- 嵌入的 Google Drive 資料夾 -->
-        <div class="flex-grow w-full border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden mb-4">
-            <iframe src="https://drive.google.com/embeddedfolderview?id=1JYgHFUvwDqZWW5ZikUOZWxTmUksk48lL" class="w-full h-full" frameborder="0"></iframe>
+        <!-- 下載按鈕容器 -->
+        <div class="flex-grow w-full flex flex-col items-center justify-center space-y-4 mb-4">
+             <a href="https://drive.google.com/uc?export=download&id=1oFClE5WOVxgNbXBl8cgG8_splox6iOqf" download class="w-full md:w-3/4 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 text-center">
+                下載 8.8.8.8 DNS.bat
+            </a>
+            <a href="https://drive.google.com/uc?export=download&id=1qBzNRQkT5MNS5qdS5DjygJTZuc-HJD8s" download class="w-full md:w-3/4 bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-center">
+                下載 原始DNS.bat
+            </a>
         </div>
         
         <!-- 下一步按鈕 -->
