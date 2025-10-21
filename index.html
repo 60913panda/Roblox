@@ -10,43 +10,44 @@
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 h-full flex items-center justify-center font-sans p-4">
     <!-- 主內容容器 -->
-    <div class="text-center p-6 md:p-8 bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full flex flex-col" style="height: 90vh;">
+    <div class="text-center p-6 md:p-8 bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-md w-full flex flex-col">
         <!-- Roblox 圖示與標題 -->
         <div class="mb-4">
             <img src="https://corp.roblox.com/icons/android-icon-512x512.png" alt="Roblox 圖示" class="w-24 h-auto mx-auto shadow-md rounded-lg">
             <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mt-4">
                 Roblox 下載流程
             </h1>
-            <p class="text-gray-600 dark:text-gray-400 text-sm">
-                請先下載必要的設定檔，然後點擊「下一步」。
+            <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">
+                點擊下方按鈕以檢視說明並下載設定檔。
             </p>
         </div>
         
-        <!-- 下載按鈕容器 -->
-        <div class="flex-grow w-full flex flex-col items-center justify-center space-y-4 mb-4">
-             <a href="https://drive.google.com/uc?export=download&id=1oFClE5WOVxgNbXBl8cgG8_splox6iOqf" download class="w-full md:w-3/4 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 text-center">
-                下載 8.8.8.8 DNS.bat
-            </a>
-            <a href="https://drive.google.com/uc?export=download&id=1qBzNRQkT5MNS5qdS5DjygJTZuc-HJD8s" download class="w-full md:w-3/4 bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-center">
-                下載 原始DNS.bat
-            </a>
+        <div class="mt-8">
+            <!-- 下一步按鈕 -->
+            <button id="nextStepBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                下一步
+            </button>
         </div>
-        
-        <!-- 下一步按鈕 -->
-        <button id="nextStepBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 mt-auto">
-            下一步
-        </button>
     </div>
 
     <!-- 提示訊息 Modal -->
     <div id="infoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 text-center max-w-2xl w-full flex flex-col" style="height: 80vh;">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 text-center max-w-2xl w-full flex flex-col" style="height: 85vh;">
             <!-- 嵌入的 Google 文件 -->
-            <div class="flex-grow w-full mb-4">
+            <div class="flex-grow w-full mb-4 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
                 <iframe src="https://docs.google.com/document/d/e/2PACX-1vQqE5k5BKACm_j4Isy7Dz5YDsdog9FhzcN3FGnV66giyKeR7KcL5p9iaDXwnZV26M-ZdOthrfT8bJzC/pub?embedded=true" class="w-full h-full border-0"></iframe>
             </div>
+             <!-- 下載按鈕容器 -->
+            <div class="w-full flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 mb-4">
+                <a href="https://drive.google.com/file/d/1oFClE5WOVxgNbXBl8cgG8_splox6iOqf/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-center">
+                    下載 8.8.8.8 DNS.bat
+                </a>
+                <a href="https://drive.google.com/file/d/1qBzNRQkT5MNS5qdS5DjygJTZuc-HJD8s/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex-1 bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-center">
+                    下載 原始DNS.bat
+                </a>
+            </div>
             <!-- 完成按鈕 -->
-            <button id="completeBtn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg mt-auto">
+            <button id="completeBtn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg">
                 完成
             </button>
         </div>
@@ -78,4 +79,5 @@
     </script>
 </body>
 </html>
+
 
