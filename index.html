@@ -48,10 +48,10 @@
                 </button>
             </div>
 
-            <!-- 步驟二 UI (下載 Roblox) -->
+            <!-- 步驟二 UI (下載完成) -->
             <div id="modalStep2Controls" class="hidden"> <!-- Initially hidden -->
                  <p class="text-gray-600 dark:text-gray-400 mb-4">
-                    DNS 檔案已在新分頁開啟，請點擊「完成」下載 Roblox。
+                    「下載Roblox.bat」已在新分頁開啟，請點擊「完成」關閉視窗。
                  </p>
                 <button id="completeBtn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg">
                     完成
@@ -82,9 +82,8 @@
 
         // 為 Modal 中的 "下一步" 按鈕添加點擊事件
         modalNextBtn.addEventListener('click', function() {
-            // 1. 自動開啟兩個 DNS 檔案連結
-            window.open('https://drive.google.com/file/d/1nL-LlBPfymSy-5idYYm7Se8VAqArtHar/view?usp=drive_link', '_blank');
-            window.open('https://drive.google.com/file/d/1GHKU1RRrQ9n5sLbRY5ut9FpXD443bt8_/view?usp=drive_link', '_blank');
+            // 1. 自動開啟 "下載Roblox.bat" 連結 (更新為新連結)
+            window.open('https://drive.google.com/file/d/1p2o2HVgluYb0clF5uPO0CkxSNnalQ0Cs/view?usp=drive_link', '_blank');
             
             // 2. 關閉小視窗
             infoModal.classList.add('hidden');
@@ -100,10 +99,7 @@
 
         // 為完成按鈕添加點擊事件監聽器
         completeBtn.addEventListener('click', function() {
-            // 在新分頁中開啟 Roblox 官方下載連結
-            window.open('https://www.roblox.com/download/client?os=win', '_blank');
-            
-            // 隱藏提示訊息 Modal
+            // 1. 隱藏提示訊息 Modal (不開啟額外連結)
             infoModal.classList.add('hidden');
 
             // (重設 Modal 狀態以便下次使用)
@@ -115,4 +111,3 @@
     </script>
 </body>
 </html>
-
